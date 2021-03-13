@@ -38,7 +38,7 @@ public class Animal {
 
     void takeForAWalk() {
         if (this.weight > 0) {
-            this.weight -= 1;
+            this.weight -= 2;
             System.out.println("Obecna waga: " + this.weight);
         } else
             System.out.println("Zwierze nie zyje");
