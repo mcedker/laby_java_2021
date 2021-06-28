@@ -21,13 +21,13 @@ public class Human {
         this.surname = surname;
         this.age = age;
     }
-
+//
     public double getSalary(){
         System.out.println("pobrana wartosc wynagrodzenia: " + this.salary);
         System.out.println("pobrana wartosc wynagrodzenia: " + new Date());
         return salary;
     }
-
+//
     public void setSalary(Double salary){
         if (salary < 0.0){
             System.out.println("za darmo nicht robic");
@@ -39,7 +39,7 @@ public class Human {
             this.salary = salary;
         }
     }
-
+//
     public Car getCar(){
         return this.car;
     }
