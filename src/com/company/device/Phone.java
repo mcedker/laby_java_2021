@@ -15,6 +15,7 @@ public class Phone {
     String operationSystem;
     Double screenSize;
 
+
     public String toString(){
         return this.producer + " " + this.model + " " +this.operationSystem;
     }

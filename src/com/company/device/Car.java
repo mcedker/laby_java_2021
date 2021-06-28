@@ -11,8 +11,6 @@ public class Car {
         this.model=model;
         this.value=value;
     }
-    public String toString(){
-        return this.producer + " " + this.model + " jest wart: " + this.value;
-    }
+    public String toString(){return this.producer + " " + this.model + " jest wart: " + this.value; }
 
 }

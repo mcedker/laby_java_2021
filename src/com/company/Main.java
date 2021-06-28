@@ -48,6 +48,11 @@ public class Main {
         System.out.println(new Car("E36","BMWEJ", 213000.0).equals(Gruz));
         System.out.println(new Car("E36","BMWEJ", 213000.0).equals(new Car("E36","BMWEJ", 213000.0)));
         System.out.println(Gruz);
+
+        System.out.println(ajfon.toString());
+        System.out.println(andrzejek.toString());
+        System.out.println(Gruz.toString());
+        System.out.println(dog.toString());
     }
 
     @Override
