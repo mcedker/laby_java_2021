@@ -7,6 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+
         Animal dog = new Animal("tiger");
 
         dog.takeForAWalk();
@@ -42,6 +44,16 @@ public class Main {
         System.out.println("Telefon: " +ajfon);
         System.out.println("Samochod: " + Gruz);
         System.out.println("Zwierzatko: " +dog);
+
+        System.out.println(new Car("E36","BMWEJ", 213000.0).equals(Gruz));
+        System.out.println(new Car("E36","BMWEJ", 213000.0).equals(new Car("E36","BMWEJ", 213000.0)));
+        System.out.println(Gruz);
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        return (this == obj);
     }
 
 }
+
