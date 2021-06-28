@@ -1,4 +1,4 @@
-package com.company;
+package com.company.device;
 
 public class Phone {
 
@@ -15,5 +15,7 @@ public class Phone {
     String operationSystem;
     Double screenSize;
 
-
+    public String toString(){
+        return this.producer + " " + this.model + " " +this.operationSystem;
+    }
 }

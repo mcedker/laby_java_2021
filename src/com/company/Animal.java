@@ -44,4 +44,8 @@ public class Animal {
             System.out.println("Zwierze nie zyje");
     }
 
+    public String toString(){
+        return this.name + " " +this.species +" wazy: "+this.weight +" kg";
+    }
+
 }
