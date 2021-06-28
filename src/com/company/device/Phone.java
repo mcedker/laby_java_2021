@@ -1,5 +1,7 @@
 package com.company.device;
 
+import com.company.Human;
+
 public class Phone extends Device{
     String operationSystem;
     Double screenSize;
@@ -24,5 +26,17 @@ public class Phone extends Device{
         System.out.println("Wlaczamsie!");
         System.out.println("!");
         System.out.println("juz");
+    }
+
+    public void sell(Human seller, Human buyer, Double price)
+    {
+        if(seller.mobilePhone == this)
+            if(buyer.getCash() > price) {
+                buyer.setCash(buyer.getCash() - price);
+                seller.setCash(seller.getCash() + price);
+                seller.mobilePhone = null;
+                buyer.mobilePhone = this;
+                System.out.println(buyer.getName() + " kupił od " + seller.getName() + " " + this.model + " od " + this.producer);
+            }
     }
 }

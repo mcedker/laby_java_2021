@@ -9,7 +9,7 @@ public class Main {
 
 
 
-        Animal dog = new Animal("tiger");
+        Animal dog = new Animal("tiger", "Amigos");
 
         dog.takeForAWalk();
         dog.feed();
@@ -27,12 +27,13 @@ public class Main {
         dog.takeForAWalk();
 
         Human andrzejek = new Human(2000.0, "Andrzej", "Pozdrawiam", 87);
+        Human pawelek = new Human(4000.0, "Pawel", "Nigdzieniepojdzie", 13);
         andrzejek.pet = dog;
         Phone ajfon = new Phone("aple", "jedenascie", 1984, "IOS", 12.3);
 
         Car Gruz = new Car("E36", "BMWEJ",1997, 3500);
 
-        //andrzejek.mobilePhone = ajfon;
+        andrzejek.mobilePhone = ajfon;
 
         Double mySalary = andrzejek.getSalary();
 
@@ -56,7 +57,10 @@ public class Main {
 
         Gruz.turnOn();
         ajfon.turnOn();
-
+        pawelek.setCash(3000.0);
+        dog.sell(andrzejek, pawelek, 400.0);
+        Gruz.sell(andrzejek, pawelek, 1400.0);
+        ajfon.sell(andrzejek, pawelek, 200.0);
     }
 
     @Override

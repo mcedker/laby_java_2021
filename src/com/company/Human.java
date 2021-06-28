@@ -10,10 +10,11 @@ public class Human {
     String surname;
     int age;
     String sex;
-    Phone mobilePhone;
+    public Phone mobilePhone;
     Animal pet;
     private Car car;
     private double salary;
+    private double cash = 0.0;
 
     public Human(Double salary, String name, String surname, int age){
         this.salary = salary;
@@ -43,6 +44,11 @@ public class Human {
     public Car getCar(){
         return this.car;
     }
+
+    public void setMobilePhone(Phone phone)
+    {
+        this.mobilePhone = phone;
+    }
 //
     public void setCar(Car car2)
     {
@@ -62,4 +68,22 @@ public class Human {
 //
     @Override
     public String toString(){ return this.name + " " + this.surname + " " +this.age+"l"; }
+
+    public void sell(Human seller, Human buyer, Double price)
+    {
+        System.out.println("D is silent");
+    }
+
+    public double getCash() {
+        return cash;
+    }
+
+    public void setCash(Double cash) {
+        this.cash = cash;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+
 }

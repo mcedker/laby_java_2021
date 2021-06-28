@@ -10,9 +10,9 @@ public class Animal {
 
     static public final Double DEFAULT_ANIMAL_WEIGHT = 1.0;
 
-    public Animal(String species) {
+    public Animal(String species, String name) {
         this.species = species;
-
+        this.name = name;
         switch (this.species) {
             case "dog":
                 this.weight = 20.0;
@@ -48,5 +48,15 @@ public class Animal {
         return this.name + " " +this.species +" wazy: "+this.weight +" kg";
     }
 
-
+    public void sell(Human seller, Human buyer, Double price)
+    {
+        if(seller.pet == this)
+            if(buyer.getCash() > price) {
+                buyer.setCash(buyer.getCash() - price);
+                seller.setCash(seller.getCash() + price);
+                seller.pet = null;
+                buyer.pet = this;
+                System.out.println(buyer.name + " kupił od " + seller.name + " " + this.name);
+            }
+    }
 }
