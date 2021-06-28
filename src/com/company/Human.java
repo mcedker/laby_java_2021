@@ -43,7 +43,7 @@ public class Human {
     public Car getCar(){
         return this.car;
     }
-
+//
     public void setCar(Car car2)
     {
         if(this.salary>car2.value)
@@ -59,7 +59,7 @@ public class Human {
         else
             System.out.println("nie stac Cie na ten samochod");
     }
-
+//
     public String toString(){
         return this.name + " " + this.surname + " " +this.age+"l";
     }
