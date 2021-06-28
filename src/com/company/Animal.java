@@ -43,9 +43,10 @@ public class Animal {
         } else
             System.out.println("Zwierze nie zyje");
     }
-
+    @Override
     public String toString(){
         return this.name + " " +this.species +" wazy: "+this.weight +" kg";
     }
+
 
 }

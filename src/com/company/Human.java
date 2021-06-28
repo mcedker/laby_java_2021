@@ -60,5 +60,6 @@ public class Human {
             System.out.println("nie stac Cie na ten samochod");
     }
 //
+    @Override
     public String toString(){ return this.name + " " + this.surname + " " +this.age+"l"; }
 }

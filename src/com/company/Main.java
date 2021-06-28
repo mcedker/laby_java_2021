@@ -28,11 +28,11 @@ public class Main {
 
         Human andrzejek = new Human(2000.0, "Andrzej", "Pozdrawiam", 87);
         andrzejek.pet = dog;
-        Phone ajfon = new Phone("aple", "jedenascie", "ios", 15.4);
+        Phone ajfon = new Phone("aple", "jedenascie", 1984, "IOS", 12.3);
 
-        Car Gruz = new Car("E36", "BMWEJ",213000.0);
+        Car Gruz = new Car("E36", "BMWEJ",1997, 3500);
 
-        andrzejek.mobilePhone = ajfon;
+        //andrzejek.mobilePhone = ajfon;
 
         Double mySalary = andrzejek.getSalary();
 
@@ -45,14 +45,18 @@ public class Main {
         System.out.println("Samochod: " + Gruz);
         System.out.println("Zwierzatko: " +dog);
 
-        System.out.println(new Car("E36","BMWEJ", 213000.0).equals(Gruz));
-        System.out.println(new Car("E36","BMWEJ", 213000.0).equals(new Car("E36","BMWEJ", 213000.0)));
-        System.out.println(Gruz);
+        //System.out.println(new Car("E36","BMWEJ", 213000.0).equals(Gruz));
+        //System.out.println(new Car("E36","BMWEJ", 213000.0).equals(new Car("E36","BMWEJ", 213000.0)));
+        //System.out.println(Gruz);
 
         System.out.println(ajfon.toString());
         System.out.println(andrzejek.toString());
         System.out.println(Gruz.toString());
         System.out.println(dog.toString());
+
+        Gruz.turnOn();
+        ajfon.turnOn();
+
     }
 
     @Override
