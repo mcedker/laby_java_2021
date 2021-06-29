@@ -2,7 +2,7 @@ package com.company.device;
 
 import com.company.Human;
 
-public class Car extends Device {
+abstract public class Car extends Device {
     public double value;
 
     public Car(String model, String producer, Integer yearOfProduction, double value)
@@ -36,5 +36,7 @@ public class Car extends Device {
         else
             System.out.println("Sprzedajacy nie ma tego przedmiotu :(");
     }
+
+    abstract void refuel();
 
 }

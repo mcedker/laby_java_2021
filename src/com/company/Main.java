@@ -3,8 +3,7 @@ package com.company;
 import com.company.creatures.Animal;
 import com.company.creatures.FarmAnimal;
 import com.company.creatures.Pet;
-import com.company.device.Car;
-import com.company.device.Phone;
+import com.company.device.*;
 
 public class Main {
 
@@ -34,8 +33,9 @@ public class Main {
         andrzejek.pet = dog;
         Phone ajfon = new Phone("aple", "jedenascie", 1984, "IOS", 12.3);
         FarmAnimal krowa = new FarmAnimal("cat","krowka");
-        Car Gruz = new Car("E36", "BMWEJ",1997, 3500);
-
+        LPG Gruz = new LPG("E36", "BMWEJ",1997, 3500.0);
+        Electric Tesla = new Electric("S", "TESLA",2012, 1000.0);
+        Diesel Ciezarowka = new Diesel("TIR", "SKANIA",1987, 300000.0);
         andrzejek.mobilePhone = ajfon;
 
         Double mySalary = andrzejek.getSalary();
@@ -68,6 +68,12 @@ public class Main {
         dog.feed();
         dog.feed(500.0);
         krowa.beEaten();
+
+        Gruz.refuel();
+        Tesla.refuel();
+        Ciezarowka.refuel();
+
+        ajfon.installAnnApp("FINDER");
     }
 
     @Override
