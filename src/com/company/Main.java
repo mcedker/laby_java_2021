@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.creatures.Animal;
+import com.company.creatures.FarmAnimal;
+import com.company.creatures.Pet;
 import com.company.device.Car;
 import com.company.device.Phone;
 
@@ -9,7 +12,7 @@ public class Main {
 
 
 
-        Animal dog = new Animal("tiger", "Amigos");
+        Pet dog = new Pet("tiger", "Amigos");
 
         dog.takeForAWalk();
         dog.feed();
@@ -30,7 +33,7 @@ public class Main {
         Human pawelek = new Human(4000.0, "Pawel", "Nigdzieniepojdzie", 13);
         andrzejek.pet = dog;
         Phone ajfon = new Phone("aple", "jedenascie", 1984, "IOS", 12.3);
-
+        FarmAnimal krowa = new FarmAnimal("cat","krowka");
         Car Gruz = new Car("E36", "BMWEJ",1997, 3500);
 
         andrzejek.mobilePhone = ajfon;
@@ -61,6 +64,10 @@ public class Main {
         dog.sell(andrzejek, pawelek, 400.0);
         Gruz.sell(andrzejek, pawelek, 1400.0);
         ajfon.sell(andrzejek, pawelek, 200.0);
+
+        dog.feed();
+        dog.feed(500.0);
+        krowa.beEaten();
     }
 
     @Override

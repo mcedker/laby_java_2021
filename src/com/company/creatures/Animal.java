@@ -1,8 +1,10 @@
-package com.company;
+package com.company.creatures;
+
+import com.company.Human;
 
 import java.io.File;
 
-public class Animal {
+abstract public class Animal {
     final String species;
     private Double weight;
     String name;
@@ -28,7 +30,16 @@ public class Animal {
         }
     }
 
-    void feed() {
+    public double getWeight() {
+        return this.weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+
+    public void feed() {
         if (this.weight > 0) {
             this.weight += 1;
             System.out.println("Obecna waga: " + this.weight);
@@ -36,7 +47,7 @@ public class Animal {
             System.out.println("Zwierze nie zyje");
     }
 
-    void takeForAWalk() {
+    public void takeForAWalk() {
         if (this.weight > 0) {
             this.weight -= 2;
             System.out.println("Obecna waga: " + this.weight);
@@ -56,7 +67,13 @@ public class Animal {
                 seller.setCash(seller.getCash() + price);
                 seller.pet = null;
                 buyer.pet = this;
-                System.out.println(buyer.name + " kupił od " + seller.name + " " + this.name);
+                System.out.println(buyer.getName() + " kupił od " + seller.getName() + " " + this.name);
             }
     }
+
+    public void feed(double foodWeight){
+        this.weight += foodWeight*0.4;
+    }
 }
+
+
